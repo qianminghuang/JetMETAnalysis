@@ -39,9 +39,7 @@ scram b -j8
 git cms-addpkg RecoJets/JetProducers
 cd RecoJets/JetProducers/python/
 git clone https://github.com/qianminghuang/JEC-94X-RecoJet.git
-cd ..
-cd ..
-cd ..
+cd ../../../
 scram b -j8
 ```
 
