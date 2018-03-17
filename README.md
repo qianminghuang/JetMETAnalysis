@@ -22,8 +22,8 @@ The JetUtilities subpackage contains useful tools and plugins for the JetMETAnal
 <a name="setup"></a>
 ## Set up the framework
 ```
-cmsrel CMSSW_10_0_0
-cd CMSSW_10_0_0/src
+cmsrel CMSSW_10_0_3
+cd CMSSW_10_0_3/src
 cmsenv
 git cms-init
 
@@ -32,29 +32,19 @@ git cms-addpkg L1Trigger/L1TGlobal
 git cms-addpkg HLTrigger/Configuration
 
 git cms-checkdeps -A -a
-scram b -j 6
+scram b -j8
 rehash
 
-git clone https://github.com/bchirod/JetMET-Analysis-for-JEC-94X.git
-cd JetMETAnalysis/
-git checkout online
-git branch
-cd ../
-scram b -j 6
-cd JetMETAnalysis/JetAnalyzers/test/
-voms-proxy-init --voms cms
+git clone https://github.com/qianminghuang/JetMETAnalysis.git
+scram b -j8
 
-
-cd ..
-cd ..
-cd ..
 git cms-addpkg RecoJets/JetProducers
 cd RecoJets/JetProducers/python/
-git clone https://github.com/bchirod/JEC-94X-RecoJet.git
+git clone https://github.com/qianminghuang/JEC-94X-RecoJet.git
 cd ..
 cd ..
 cd ..
-scram b -j 6
+scram b -j8
 ```
 
 <a name="ntuple"></a>
