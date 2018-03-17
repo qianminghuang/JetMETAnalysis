@@ -32,8 +32,6 @@ git cms-addpkg L1Trigger/L1TGlobal
 git cms-addpkg HLTrigger/Configuration
 
 git cms-checkdeps -A -a
-scram b -j8
-rehash
 
 git clone https://github.com/qianminghuang/JetMETAnalysis.git
 scram b -j8
