@@ -94,19 +94,11 @@ process.GlobalTag = cms.ESSource("PoolDBESSource",
     RefreshEachRun = cms.untracked.bool(False),
     RefreshOpenIOVs = cms.untracked.bool(False),
     connect = cms.string('frontier://FrontierProd/CMS_CONDITIONS'),
-    globaltag = cms.string('100X_upgrade2018_realistic_v10'),
+    globaltag = cms.string('80X_mcRun2_asymptotic_ForTSGStudies_fromRunIIFall15DR76_v0'),
     #globaltag = cms.string('80X_mcRun2_asymptotic_ForTSGStudies_v0'),
     pfnPrefix = cms.untracked.string('frontier://FrontierProd/'),
     snapshotTime = cms.string('9999-12-31 23:59:59.000'),
-    #toGet = cms.VPSet()
-    toGet = cms.VPSet(    
-       cms.PSet(
-        record = cms.string("PFCalibrationRcd"),
-        tag = cms.string("PFCalibration_HLT_2018_25ns_Spring18_V2"),
-        connect = cms.string("sqlite_file:PFCalibration_HLT_2018_25ns_Spring18_V2.db")
-      )
-    )
-
+    toGet = cms.VPSet()
 )
 
 if applyDBFile:
@@ -126,7 +118,7 @@ qcdFiles = cms.untracked.vstring(
 # Upgrade with PU #
 ###################
   #'/store/group/phys_jetmet/fengwang/JECFall16HLT/QCD_Pt-15to3000_TuneCUETP8M1_Flat_13TeV_pythia8/Fall16HLTJEC_80X_FlatPU0to70HcalNZSRAW_v1/161128_155705/0001/outputA_1101.root',
-  '/store/group/phys_jetmet/fengwang/JECFall16HLT/QCD_Pt-15to3000_TuneCUETP8M1_Flat_13TeV_pythia8/Fall16HLTJEC_80X_NoPUHcalNZSRAW_v1/161128_155846/0000/outputA_11.root',
+'/store/group/phys_jetmet/qihuang/prentuple/pu/QCD_Pt-15to3000_TuneCUETP8M1_Flat_13TeV_pythia8/Fall16HLTJEC_80X_FlatPU0to70HcalNZSRAW_qianming_v1/170421_071031/0001/outputA_900_Plan0_1434.root',
 ######################
 # Upgrade without PU #
 ######################
@@ -136,7 +128,7 @@ qcdFiles = cms.untracked.vstring(
 ###########################
 #       '/store/relval/CMSSW_7_4_0_pre9/RelValQCD_FlatPt_15_3000_13/GEN-SIM-DIGI-RECO/MCRUN2_74_V7_FastSim-v1/00000/EEC9F0EF-10D4-E411-A6E7-0025905A48D0.root'
     )
-process.maxEvents = cms.untracked.PSet(input = cms.untracked.int32(-1))
+process.maxEvents = cms.untracked.PSet(input = cms.untracked.int32(1000))
 process.source = cms.Source("PoolSource", fileNames = qcdFiles )
 
 

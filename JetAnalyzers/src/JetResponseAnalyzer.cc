@@ -79,7 +79,7 @@ JetResponseAnalyzer::JetResponseAnalyzer(const edm::ParameterSet& iConfig)
   //if (isTauJet_)   cout<<"These are TauJets   ("<<moduleLabel_<<")"<<endl;
 
   //must state that we are using the TFileService
-  //usesResource("TFileService");
+  usesResource("TFileService");
   //setupTree();
   //cout << "This is the thread id: " << std::this_thread::get_id() << endl;
 }

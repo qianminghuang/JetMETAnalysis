@@ -15,7 +15,9 @@
 #include "JetMETAnalysis/JetUtilities/interface/JRAEvent.h"
 
 #include "FWCore/Framework/interface/Frameworkfwd.h"
-#include "FWCore/Framework/interface/EDAnalyzer.h"
+//#include "FWCore/Framework/interface/EDAnalyzer.h"
+#include "FWCore/Framework/interface/one/EDAnalyzer.h"
+
 #include "FWCore/Framework/interface/Event.h"
 #include "FWCore/Framework/interface/MakerMacros.h"
  
@@ -63,8 +65,7 @@ typedef edm::View<reco::PFCandidate> PFCandidateView;
 // class definition
 ////////////////////////////////////////////////////////////////////////////////
 
-//class JetResponseAnalyzer : public edm::one::EDAnalyzer<edm::one::SharedResources>
-class JetResponseAnalyzer : public edm::EDAnalyzer
+class JetResponseAnalyzer : public edm::one::EDAnalyzer<edm::one::SharedResources>
 //class JetResponseAnalyzer : public edm::stream::EDAnalyzer<>
 {
 public:
