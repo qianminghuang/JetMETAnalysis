@@ -437,7 +437,7 @@ int main(int argc,char** argv)
         leg->SetBorderSize(0);
         if (drawlegend) leg->Draw();
 
-        TLatex *beautify1 = new TLatex(0.75,0.94,"2017 (13TeV)");
+        TLatex *beautify1 = new TLatex(0.75,0.94,"2018 (13TeV)");
         TLatex *beautify2 = new TLatex(0.25,0.86,"CMS");
         TLatex *beautify3 = new TLatex(0.25,0.81,"Simulation");
 
